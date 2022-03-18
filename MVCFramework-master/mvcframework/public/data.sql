@@ -11,3 +11,12 @@ create table Countries(
     population int(10) UNSIGNED NOT NULL,
     PRIMARY KEY (id)
     ) engine = InnoDB CHARSET = latin1;
+    
+insert into Countries values(null, 'Nederland', 'Amsterdam', 'Europa', '17134872');
+insert into Countries values(null, 'Duitsland', 'Berlijn', 'Europa', '87566872');
+insert into Countries values(null, 'Belgie', 'Brussel', 'Europa', '17134872');
+insert into Countries values(null, 'Verenigde Staten', 'Washington', 'Noord-Amerika', '271348724');
+insert into Countries values(null, 'Australie', 'Canberra', 'Oceanië', '29134874');
+
+
+select* from Countries;
