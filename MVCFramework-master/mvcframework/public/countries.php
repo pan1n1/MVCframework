@@ -6,8 +6,11 @@ include "../app/models/MCountry.php";
 
 $conn = new DatabaseController();
 
+
+?> <br> <?
+
 $conn1 = $conn->connect();
 
-$conn->
+$conn->getCountries($conn1);
 
 ?>

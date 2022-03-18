@@ -8,7 +8,7 @@ class DatabaseController
         $SERVERNAME = ("localhost");
         $USERNAME = ( "root");
         $PASSWORD = ( "");
-        $DBNAME = ("georgeutrecht");
+        $DBNAME = ("framework");
 
         $conn = mysqli_connect($SERVERNAME, $USERNAME, $PASSWORD, $DBNAME);
         $conn;
@@ -19,7 +19,7 @@ class DatabaseController
         $SERVERNAME = ("localhost");
         $USERNAME = ( "root");
         $PASSWORD = ( "");
-        $DBNAME = ("georgeutrecht");
+        $DBNAME = ("framework");
 
         $conn = mysqli_connect($SERVERNAME, $USERNAME, $PASSWORD, $DBNAME);
         return $conn;
@@ -30,14 +30,14 @@ class DatabaseController
 
     function getCountries($conn){
         
-        $sql = "SELECT * FROM `bookings` order by `timeslot` ";
+        $sql = "SELECT * FROM `countries` order by `id` ";
         $result = mysqli_query($conn, $sql);
-        $record = mysqli_fetch_assoc($result);
-        
+      
+
         if ($result->num_rows > 0) {
             // output data of each row
             while($row = $result->fetch_assoc()) {
-                echo ($row["id"] . " " . $row["name"] . " " . $row["email"] . " " . $row["date"] . " " . $row["timeslot"] . "<br>");
+                echo ($row["id"] . " " . $row["name"] . " " . $row["capitalCity"] . " " . $row["continent"] . " " . $row["population"] . "<br>");
             }
         } else {
             echo "0 results";
